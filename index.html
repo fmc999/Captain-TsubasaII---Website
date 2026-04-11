@@ -100,6 +100,33 @@
             margin: 0 5px;
         }
 
+        .language-selector {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            z-index: 1000;
+        }
+
+        .language-selector select {
+            background: rgba(20, 35, 20, 0.85);
+            border: 2px solid #ffd700;
+            border-radius: 6px;
+            color: #ffd700;
+            padding: 6px 12px;
+            font-size: 0.9em;
+            cursor: pointer;
+            outline: none;
+        }
+
+        .language-selector select:hover {
+            background: rgba(20, 35, 20, 1);
+        }
+
+        .language-selector option {
+            background: rgba(20, 35, 20, 0.95);
+            color: #ffd700;
+        }
+
         .disclaimer {
             padding: 10px 15px;
             background: rgba(50, 15, 15, 0.8);
@@ -282,23 +309,30 @@
     
     <div class="bg-layer" id="bgImage"></div>
     
+    <div class="language-selector">
+        <select id="languageSelect" onchange="changeLanguage()">
+            <option value="zh">🇨🇳 中文</option>
+            <option value="en">🇺🇸 English</option>
+        </select>
+    </div>
+    
     <div class="main-container">
         <div class="header">
-            <h1 class="title">⚽ 天使之翼 2-谁与争锋 PC 版 ⚽</h1>
-            <p class="subtitle">Captain Tsubasa II - Who Will Win by taotao</p>
-            <div class="version-badge">v1.02</div>
-            <p class="author">作者：桃桃 | 2026.04.05</p>
+            <h1 class="title" data-i18n="title">⚽ 天使之翼 2-谁与争锋 PC 版 ⚽</h1>
+            <p class="subtitle" data-i18n="subtitle">Captain Tsubasa II - Who Will Win by taotao</p>
+            <div class="version-badge" data-i18n="version">v1.02</div>
+            <p class="author" data-i18n="author">作者：桃桃 | 2026.04.05</p>
         </div>
 
-        <div class="disclaimer">
+        <div class="disclaimer" data-i18n="disclaimer">
             ⚠️ 转载请注明原作者及出处，禁止商业用途
         </div>
 
         <div class="content-area">
             <div class="left-panel">
                 <div class="section">
-                    <h2>📜 更新日志及简介</h2>
-                    <div style="font-size: 0.75em; color: #ccc; line-height: 1.6; max-height: 500px; overflow-y: auto; padding-right: 5px;">
+                    <h2 data-i18n="updateLog">📜 更新日志及简介</h2>
+                    <div id="updateLogContent" style="font-size: 0.75em; color: #ccc; line-height: 1.6; max-height: 500px; overflow-y: auto; padding-right: 5px;">
                         <p style="margin-bottom: 10px;"><strong style="color: #ff6b6b;">免责声明：</strong><br>转载请注明一下原作者及出处 尊重他人也是尊重自己 本版纯属个人的兴趣爱好 版权归于原版厂家 为尊重原作者 禁止将本版和所用素材 字体等用于任何商业用途 违者后果自负</p>
                         
                         <p style="margin-bottom: 10px; border-top: 1px solid #ffd700; padding-top: 10px;"><strong style="color: #ffd700;">天使之翼Ⅱ-谁与争锋 PC 重置版（作者：桃桃）</strong><br>
@@ -410,69 +444,281 @@
 
             <div class="right-panel">
                 <div class="section">
-                    <h2>🎮 按键说明</h2>
+                    <h2 data-i18n="controls">🎮 按键说明</h2>
                     <div class="key-grid">
                         <div class="key-box">
-                            <div class="key-label">方向键</div>
+                            <div class="key-label" data-i18n="directionKeys">方向键</div>
                             <div class="key-code">WASD</div>
                         </div>
                         <div class="key-box">
-                            <div class="key-label">按键 B</div>
+                            <div class="key-label" data-i18n="buttonB">按键 B</div>
                             <div class="key-code">J</div>
                         </div>
                         <div class="key-box">
-                            <div class="key-label">按键 A</div>
+                            <div class="key-label" data-i18n="buttonA">按键 A</div>
                             <div class="key-code">K</div>
                         </div>
                         <div class="key-box">
-                            <div class="key-label">选择键</div>
+                            <div class="key-label" data-i18n="selectButton">选择键</div>
                             <div class="key-code">V</div>
                         </div>
                         <div class="key-box">
-                            <div class="key-label">开始键</div>
+                            <div class="key-label" data-i18n="startButton">开始键</div>
                             <div class="key-code">B</div>
                         </div>
                         <div class="key-box" style="background: rgba(70, 35, 35, 0.8); border-color: #aa5a5a;">
-                            <div class="key-label">重启游戏</div>
+                            <div class="key-label" data-i18n="restartGame">重启游戏</div>
                             <div class="key-code">F1</div>
                         </div>
                     </div>
                 </div>
 
                 <div class="section">
-                    <h2>✨ 游戏特色</h2>
+                    <h2 data-i18n="features">✨ 游戏特色</h2>
                     <div class="feature-grid">
                         <div class="feature-card">
                             <div class="feature-icon">🏆</div>
-                            <div class="feature-name">多难度</div>
-                            <div class="feature-text">困难/地狱/深渊</div>
+                            <div class="feature-name" data-i18n="multiDifficulty">多难度</div>
+                            <div class="feature-text" data-i18n="difficultyText">困难/地狱/深渊</div>
                         </div>
                         <div class="feature-card">
                             <div class="feature-icon">🎵</div>
-                            <div class="feature-name">音乐试听</div>
-                            <div class="feature-text">00-199 首 BGM</div>
+                            <div class="feature-name" data-i18n="musicPreview">音乐试听</div>
+                            <div class="feature-text" data-i18n="musicText">00-199 首 BGM</div>
                         </div>
                         <div class="feature-card">
                             <div class="feature-icon">⚔️</div>
-                            <div class="feature-name">真实系统</div>
-                            <div class="feature-text">红黄牌/乌龙球</div>
+                            <div class="feature-name" data-i18n="realSystem">真实系统</div>
+                            <div class="feature-text" data-i18n="systemText">红黄牌/乌龙球</div>
                         </div>
                         <div class="feature-card">
                             <div class="feature-icon">⭐</div>
-                            <div class="feature-name">明星球员</div>
-                            <div class="feature-text">必杀技华丽释放</div>
+                            <div class="feature-name" data-i18n="starPlayers">明星球员</div>
+                            <div class="feature-text" data-i18n="playersText">必杀技华丽释放</div>
                         </div>
                     </div>
+                </div>
+
+                <div class="section">
+                    <h2 data-i18n="gameVideo">📺 游戏视频</h2>
+                    <a href="https://www.bilibili.com/video/BV1R2QMByEfM" target="_blank" style="text-decoration: none;">
+                        <div class="feature-card" style="background: rgba(255, 107, 107, 0.15); border-color: #ff6b6b; cursor: pointer; transition: all 0.3s; padding: 15px 8px;">
+                            <img src="bilibili.png" alt="Bilibili" style="width: 60px; height: 60px; margin-bottom: 8px; display: block; margin-left: auto; margin-right: auto;"/>
+                            <div class="feature-name" data-i18n="bilibili" style="color: #ff6b6b; font-size: 0.95em; margin-bottom: 4px;">哔哩哔哩</div>
+                            <div class="feature-text" data-i18n="clickToWatch">点击查看游戏视频</div>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
 
-        <div class="footer">
+        <div class="footer" data-i18n="footer">
             🎮 天使之翼 2-谁与争锋 PC 版 v1.02 | 仅供学习交流使用
         </div>
     </div>
 
     <script>
+        // 多语言翻译字典
+        const translations = {
+            zh: {
+                title: "⚽ 天使之翼 2-谁与争锋 PC 版 ⚽",
+                subtitle: "Captain Tsubasa II - Who Will Win by taotao",
+                version: "v1.02",
+                author: "作者：桃桃 | 2026.04.05",
+                disclaimer: "⚠️ 转载请注明原作者及出处，禁止商业用途",
+                updateLog: "📜 更新日志及简介",
+                controls: "🎮 按键说明",
+                directionKeys: "方向键",
+                buttonB: "按键 B",
+                buttonA: "按键 A",
+                selectButton: "选择键",
+                startButton: "开始键",
+                restartGame: "重启游戏",
+                features: "✨ 游戏特色",
+                multiDifficulty: "多难度",
+                difficultyText: "困难/地狱/深渊",
+                musicPreview: "音乐试听",
+                musicText: "00-199 首 BGM",
+                realSystem: "真实系统",
+                systemText: "红黄牌/乌龙球",
+                starPlayers: "明星球员",
+                playersText: "必杀技华丽释放",
+                footer: "🎮 天使之翼 2-谁与争锋 PC 版 v1.02 | 仅供学习交流使用",
+                gameVideo: "📺 游戏视频",
+                bilibili: "哔哩哔哩",
+                clickToWatch: "点击查看游戏视频"
+            },
+            en: {
+                title: "⚽ Captain Tsubasa 2 - Who Will Win PC Ver. ⚽",
+                subtitle: "Captain Tsubasa II - Who Will Win by taotao",
+                version: "v1.02",
+                author: "Author: Taotao | 2026.04.05",
+                disclaimer: "⚠️ Please credit the original author and source, commercial use prohibited",
+                updateLog: "📜 Update Log & Introduction",
+                controls: "🎮 Controls",
+                directionKeys: "Direction Keys",
+                buttonB: "Button B",
+                buttonA: "Button A",
+                selectButton: "Select Button",
+                startButton: "Start Button",
+                restartGame: "Restart Game",
+                features: "✨ Game Features",
+                multiDifficulty: "Multi-Difficulty",
+                difficultyText: "Hard/Hell/Abyss",
+                musicPreview: "Music Preview",
+                musicText: "00-199 BGM Tracks",
+                realSystem: "Real System",
+                systemText: "Red/Yellow Cards/Own Goals",
+                starPlayers: "Star Players",
+                playersText: "Spectacular Special Moves",
+                footer: "🎮 Captain Tsubasa 2 - Who Will Win PC Ver. v1.02 | For learning and communication only",
+                gameVideo: "📺 Game Video",
+                bilibili: "Bilibili",
+                clickToWatch: "Click to watch game video",
+                updateLogContent: `<p style="margin-bottom: 10px;"><strong style="color: #ff6b6b;">Disclaimer:</strong><br>Please credit the original author and source. Respect others and respect yourself. This version is purely for personal interest and hobby. Copyright belongs to the original manufacturer. To respect the original author, commercial use of this version and the materials and fonts used is prohibited. Violators assume all responsibility.</p>
+                
+                <p style="margin-bottom: 10px; border-top: 1px solid #ffd700; padding-top: 10px;"><strong style="color: #ffd700;">Captain Tsubasa Ⅱ - Who Will Win PC Remastered Version (Author: Taotao)</strong><br>
+                Captain TsubasaⅡ - Who Will Win by taotao<br>
+                Preliminary test version release date: 2026.03.29<br>
+                Version release fully authorized by Taotao's eldest disciple (Gui Li)</p>
+                
+                <p style="margin-bottom: 10px; border-top: 1px solid #ffd700; padding-top: 10px;"><strong style="color: #ffd700;">Special Thanks to Version Modifiers (No ranking):</strong><br>
+                Not found. Taotao's eldest disciple (Gui Li), Taotao's junior disciple (Shi Meng), Tuisi Xiaojing, Watermelon Seed, Chu Yu Qingsi, Zuo Ba, I am Xiaoluolin's father, Luoying, Zhongnian Yujian, Kaixin Shiluo, Xiaomuyun, I am Xiaomeinv, Yilan Zhongshan Xiao, Ruochan, Shouhu Yisheng, Lizi, Liuye, Wenyue</p>
+                
+                <p style="margin-bottom: 10px; border-top: 1px solid #ffd700; padding-top: 10px;"><strong style="color: #ffd700;">Click the application to enter the game directly</strong><br>
+                Default controls:<br>
+                Restart game: F1<br>
+                Direction keys: W A S D<br>
+                Button B: J<br>
+                Button A: K<br>
+                Select button: V<br>
+                Start button: B</p>
+                
+                <p style="margin-bottom: 10px; border-top: 1px solid #ffd700; padding-top: 10px;"><strong style="color: #ffd700;">Game Additions:</strong><br>
+                Added some formal football mechanisms modified based on the original version (no magic modifications)<br>
+                Added difficulty selection: Hard, Hell, Abyss<br>
+                Added level selection mode (freely choose levels)<br>
+                Added direct access to music preview mode 00-199<br>
+                Added dribbling single-choice system<br>
+                Added ability to view enemy personnel by pressing select button after encounter (including flat, high and low air)<br>
+                Added foul yellow and red card system<br>
+                Added probability of players protesting to the referee after a yellow card, with a certain chance of direct red card<br>
+                Added automatic end of match after more than 5 players are sent off from either team<br>
+                Added probability of shots going off target<br>
+                Added ball explosion after hitting the goalpost<br>
+                Added probability of handball fouls when passing<br>
+                Added probability of own goals when clearing<br>
+                Added out-of-bounds system when our pass exceeds body position limit<br>
+                Added probability of errors in passing/stopping, ball out of bounds or nearby players gaining possession<br>
+                Added probability of fouls or own goals in both teams' tackling<br>
+                Added probability of clearing out of bounds<br>
+                Added player status values: Red (5% ability bonus), Yellow (3% ability bonus), Green (original ability), Blue (3% ability reduction), White (5% ability reduction)<br>
+                Added injury system: If a player is injured, the team will temporarily play with 10 players until the ball goes out of bounds or a goal is scored. All cooperation skills with this player are invalid during this period<br>
+                Added system for swapping sides between first and second half<br>
+                Added that all national team enemies from level 17 are all-stars with corresponding special moves<br>
+                Added offense and defense display system, integrating match time, team name, score, and offense/defense value display box</p>
+                
+                <p style="margin-bottom: 10px; border-top: 1px solid #ffd700; padding-top: 10px;"><strong style="color: #ffd700;">Game Adjustments:</strong><br>
+                Adjusted initial ability values of all players (game balance is balanced, except Hell and Abyss)<br>
+                Restored Jun Misugi's heart disease, but greatly weakened abilities<br>
+                Adjusted other key positions (except operation keys, all other shortcut keys are cancelled)<br>
+                Adjusted level with progress, players can also level up but need to record password to continue (leveling up is consistent with original inheritance experience)<br>
+                All bugs in the original version have been fixed<br>
+                Adjusted maximum power value will not overflow<br>
+                Adjusted probability of random rage (except goalkeepers, all are 3.33)<br>
+                Adjusted power after rage will not exceed 1.5 times of own ability value<br>
+                Adjusted levels 6 and 16 to automatically pass regardless of win or loss<br>
+                Adjusted computer AI movement, smarter than the original version<br>
+                All levels are original works and anime characters (no magic modifications)<br>
+                Some portrait star special moves have changed music<br>
+                All level music adjusted, each team has two different songs<br>
+                Our level limit is 32<br>
+                Half time is 45 minutes<br>
+                Fixed all players' stiff freeze problem<br>
+                Fixed problem of player No. 9 being sent off and kicking off<br>
+                Fixed problem of free kick outside the big penalty area after enemy No. 10 is sent off<br>
+                Fixed AI passing problem after being sent off<br>
+                Fixed corner kick and passing problem after being sent off<br>
+                Fixed throw-in problem after being sent off<br>
+                Fixed substitution problem in and out of the meeting room after being sent off<br>
+                Fixed player AI walking problem after changing positions in half time<br>
+                Fake ability value display is converted to real value<br>
+                Adjusted game screen, operation speed and fluency</p>
+                
+                <p style="margin-bottom: 10px; border-top: 1px solid #ffd700; padding-top: 10px;"><strong style="color: #ffd700;">Level Introduction:</strong><br>
+                Level 01: Tsubasa vs Pascal & Rio<br>
+                Level 02: Tsubasa vs Lima<br>
+                Level 03: Tsubasa vs Ramon & Seixas<br>
+                Level 04: Tsubasa vs Sesta<br>
+                Level 05: Tsubasa vs Napoleon & Dious<br>
+                Level 06: Tsubasa vs Wakabayashi, Schneider & Karasu<br>
+                Level 07: Misaki vs Jito & Sano<br>
+                Level 08: Misaki vs Tachibana Brothers & Daigan Kumichiro<br>
+                Level 09: Misaki vs Hayato & Kanda<br>
+                Level 10: Misaki vs Sawada<br>
+                Level 11: Misaki vs Misugi & Matsuyama<br>
+                Level 12: Misaki vs Hyuga, Sawada & Wakashimazu<br>
+                Level 13: Tsubasa vs Shingo & Akai<br>
+                Level 14: Tsubasa vs Pierre & Alberto<br>
+                Level 15: Tsubasa vs Santana, Natureza & Gertis<br>
+                Level 16: Tsubasa vs All Japan<br>
+                Level 17: All Japan VS RJ.11<br>
+                Level 18: All Japan VS China<br>
+                Level 19: All Japan VS Thailand<br>
+                Level 20: All Japan VS North Korea<br>
+                Level 21: All Japan VS Saudi Arabia<br>
+                Level 22: All Japan VS Korea<br>
+                Level 23: All Japan VS Uruguay<br>
+                Level 24: All Japan VS USA<br>
+                Level 25: All Japan VS England<br>
+                Level 26: All Japan VS Sweden<br>
+                Level 27: All Japan VS France<br>
+                Level 28: All Japan VS Mexico<br>
+                Level 29: All Japan VS Italy<br>
+                Level 30: All Japan VS Netherlands<br>
+                Level 31: All Japan VS Argentina<br>
+                Level 32: All Japan VS Germany<br>
+                Level 33: All Japan VS Brazil<br>
+                Level 34: All Japan VS Spain</p>`
+            }
+        };
+
+        // 缓存原始中文更新日志 HTML
+        var _originalUpdateLogHTML = document.getElementById('updateLogContent').innerHTML;
+
+        // 语言切换函数
+        function changeLanguage() {
+            var lang = document.getElementById('languageSelect').value;
+            var trans = translations[lang];
+            
+            // 更新所有带 data-i18n 属性的元素
+            document.querySelectorAll('[data-i18n]').forEach(function(element) {
+                var key = element.getAttribute('data-i18n');
+                if (trans[key]) {
+                    element.textContent = trans[key];
+                }
+            });
+
+            // 特殊处理更新日志内容
+            if (trans.updateLogContent) {
+                document.getElementById('updateLogContent').innerHTML = trans.updateLogContent;
+            } else if (_originalUpdateLogHTML) {
+                document.getElementById('updateLogContent').innerHTML = _originalUpdateLogHTML;
+            }
+
+            // 保存语言选择到 localStorage
+            localStorage.setItem('preferredLanguage', lang);
+            
+            console.log('语言已切换为：' + lang);
+        }
+
+        // 页面加载时恢复语言选择
+        (function() {
+            const savedLang = localStorage.getItem('preferredLanguage') || 'zh';
+            document.getElementById('languageSelect').value = savedLang;
+            changeLanguage();
+        })();
+
         // 随机背景图片
         (function() {
             const bgImages = [
