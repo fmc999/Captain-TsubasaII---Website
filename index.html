@@ -278,12 +278,14 @@
     </style>
 </head>
 <body>
+    <audio id="bgMusic" src="a1.MP3" autoplay loop></audio>
+    
     <div class="bg-layer" id="bgImage"></div>
     
     <div class="main-container">
         <div class="header">
             <h1 class="title">⚽ 天使之翼 2-谁与争锋 PC 版 ⚽</h1>
-            <p class="subtitle">Captain Tsubasa II - Who Will Win</p>
+            <p class="subtitle">Captain Tsubasa II - Who Will Win by taotao</p>
             <div class="version-badge">v1.02</div>
             <p class="author">作者：桃桃 | 2026.04.05</p>
         </div>
@@ -294,6 +296,119 @@
 
         <div class="content-area">
             <div class="left-panel">
+                <div class="section">
+                    <h2>📜 更新日志及简介</h2>
+                    <div style="font-size: 0.75em; color: #ccc; line-height: 1.6; max-height: 500px; overflow-y: auto; padding-right: 5px;">
+                        <p style="margin-bottom: 10px;"><strong style="color: #ff6b6b;">免责声明：</strong><br>转载请注明一下原作者及出处 尊重他人也是尊重自己 本版纯属个人的兴趣爱好 版权归于原版厂家 为尊重原作者 禁止将本版和所用素材 字体等用于任何商业用途 违者后果自负</p>
+                        
+                        <p style="margin-bottom: 10px; border-top: 1px solid #ffd700; padding-top: 10px;"><strong style="color: #ffd700;">天使之翼Ⅱ-谁与争锋 PC 重置版（作者：桃桃）</strong><br>
+                        Captain TsubasaⅡ - Who Will Win by taotao<br>
+                        初步测试版本发布日期：2026.03.29<br>
+                        版本发布全权由桃桃大徒弟（鬼厉）代理</p>
+                        
+                        <p style="margin-bottom: 10px; border-top: 1px solid #ffd700; padding-top: 10px;"><strong style="color: #ffd700;">特别呜谢参与版本修改者 ( 排名不分先后 )：</strong><br>
+                        Not found. 桃桃大徒弟（鬼厉）桃桃小徒弟（诗梦）褪色小箐 西瓜子 初于青丝 作吧 我是小罗琳父亲 落影 中年御剑 开心释罗 小沐云 我是小美女 一览众山笑 若婵 守护一生 狸子 六爷 温越</p>
+                        
+                        <p style="margin-bottom: 10px; border-top: 1px solid #ffd700; padding-top: 10px;"><strong style="color: #ffd700;">点击应用程序直接进入游戏</strong><br>
+                        按键默认：<br>
+                        重启游戏：F1<br>
+                        方向键：W A S D<br>
+                        按键 B：J<br>
+                        按键 A：K<br>
+                        选择键：V<br>
+                        开始键：B</p>
+                        
+                        <p style="margin-bottom: 10px; border-top: 1px solid #ffd700; padding-top: 10px;"><strong style="color: #ffd700;">游戏添加：</strong><br>
+                        添加基于原版基础上修改的一些正式足球都有的机制（无魔改）<br>
+                        添加难度选择 困难 地狱 深渊<br>
+                        添加选关模式（可自由选择关卡）<br>
+                        添加直接进入音乐试听模式 00-199<br>
+                        添加过人单选系统<br>
+                        添加遇敌后按选择键可查看敌方人员（包括平地高低空）<br>
+                        添加犯规出示红黄牌系统<br>
+                        添加裁判出示黄牌后 队员有几率对裁判抗议 一定几率直接红牌罚下<br>
+                        添加任意一方队员罚下超过 5 人后 自动结束比赛<br>
+                        添加射门有几率射偏系统<br>
+                        添加射门打门柱后球爆<br>
+                        添加传球有几率手球犯规系统<br>
+                        添加解围有几率乌龙球系统<br>
+                        添加我方传球超过身位限制球会出界系统<br>
+                        添加传球/停球有几率失误 球出界或邻近球员获得球权<br>
+                        添加双方争球有几率犯规或乌龙球<br>
+                        添加解围有几率出界系统<br>
+                        添加球员状态值 红（能力加成 5%）黄（能力加成 3%）绿（原能力）蓝（能力削减 3%）白（能力削减 5%）<br>
+                        添加受伤系统 如出现队伍会暂时已 10 人应战直至球出界或得分后方能上场 期间与此队员的所有配合技能均无效<br>
+                        添加比赛上下半场互换场地系统<br>
+                        添加从 17 关国家队开始敌方全员全明星且有相应必杀<br>
+                        添加攻防显示系统 比赛时间队伍名称比分攻防值显示框合为一体</p>
+                        
+                        <p style="margin-bottom: 10px; border-top: 1px solid #ffd700; padding-top: 10px;"><strong style="color: #ffd700;">游戏调整:</strong><br>
+                        调整所有队员初始能力值（游戏平衡度均衡 地狱 深渊除外）<br>
+                        调整恢复三杉淳心脏病 但能力大幅消弱<br>
+                        调整其它键位（除操作键外 其它快捷键全部取消）<br>
+                        调整随关等级 玩家也可自行练级但需记录密码续关（自行练级与原版继承经验一致）<br>
+                        调整原版所有 BUG 均已修复<br>
+                        调整威力最大值不会溢出<br>
+                        调整随机暴怒的几率（除守门员外均为 3.33）<br>
+                        调整暴怒后的威力不会超过自身能力值的 1.5 倍<br>
+                        调整第六关 第十六关输赢都自动过关<br>
+                        调整电脑 AI 走向 比原版更聪慧<br>
+                        调整所有关卡均为原作及动漫人物（无魔改）<br>
+                        调整部分带头像明星必杀更换音乐<br>
+                        调整全部关卡音乐每个队都有不同两首音乐<br>
+                        调整我方等级限制最高 32 级<br>
+                        调整半场时间为 45 分钟<br>
+                        调整全员硬直死机问题<br>
+                        调整 9 号被罚下开球问题<br>
+                        调整敌方 10 号被罚下后 大禁区外任意球问题<br>
+                        调整被罚下后球员 AI 传球问题<br>
+                        调整被罚下后角球开球和传球问题<br>
+                        调整被罚下后开界外球问题<br>
+                        调整被罚下后会议室和非会议室换人问题<br>
+                        调整半场换位置后球员 AI 瞎走动问题<br>
+                        调整假能力值显示均转换为真实值<br>
+                        调整游戏画面 运行速度 流畅度</p>
+                        
+                        <p style="margin-bottom: 10px; border-top: 1px solid #ffd700; padding-top: 10px;"><strong style="color: #ffd700;">关卡介绍：</strong><br>
+                        第 01 关：翼与帕斯卡尔 里奥对决<br>
+                        第 02 关：翼与罗利玛对决<br>
+                        第 03 关：翼与拉蒙 赛哈对决<br>
+                        第 04 关：翼与谢斯塔对决<br>
+                        第 05 关：翼与拿破仑 迪乌塞乌对决<br>
+                        第 06 关：翼与若林 施耐德 卡鲁茨对决<br>
+                        第 07 关：岬与次腾 佐野对决<br>
+                        第 08 关：岬与立花兄弟 大丸熊一郎对决<br>
+                        第 09 关：岬与早田 神田对决<br>
+                        第 10 关：岬与泽田对决<br>
+                        第 11 关：岬与三杉 松山对决<br>
+                        第 12 关：岬与日向 泽田 若岛对决<br>
+                        第 13 关：翼与葵新伍 赤井对决<br>
+                        第 14 关：翼与皮埃尔 阿尔贝托对决<br>
+                        第 15 关：翼与辛坦拿 拿度尼 格鲁迪斯对决<br>
+                        第 16 关：翼与全日本对决<br>
+                        第 17 关：全日本 VSRJ.11<br>
+                        第 18 关：全日本 VS 中国<br>
+                        第 19 关：全日本 VS 泰国<br>
+                        第 20 关：全日本 VS 北朝鲜<br>
+                        第 21 关：全日本 VS 沙特阿拉伯<br>
+                        第 22 关：全日本 VS 韩国<br>
+                        第 23 关：全日本 VS 乌拉圭<br>
+                        第 24 关：全日本 VS 美国<br>
+                        第 25 关：全日本 VS 英格兰<br>
+                        第 26 关：全日本 VS 瑞典<br>
+                        第 27 关：全日本 VS 法国<br>
+                        第 28 关：全日本 VS 墨西哥<br>
+                        第 29 关：全日本 VS 意大利<br>
+                        第 30 关：全日本 VS 荷兰<br>
+                        第 31 关：全日本 VS 阿根廷<br>
+                        第 32 关：全日本 VS 德国<br>
+                        第 33 关：全日本 VS 巴西<br>
+                        第 34 关：全日本 VS 西班牙</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right-panel">
                 <div class="section">
                     <h2>🎮 按键说明</h2>
                     <div class="key-grid">
@@ -350,52 +465,6 @@
                     </div>
                 </div>
             </div>
-
-            <div class="right-panel">
-                <div class="section">
-                    <h2>⚡ v1.02 最新更新</h2>
-                    <div class="update-grid" style="grid-template-columns: 1fr 1fr 1fr;">
-                        <div class="update-item"><span class="new-tag">NEW</span>窗口大小优化</div>
-                        <div class="update-item"><span class="new-tag">NEW</span>F1 重启游戏</div>
-                        <div class="update-item"><span class="new-tag">NEW</span>UI 全面优化</div>
-                    </div>
-                </div>
-
-                <div class="section">
-                    <h2>🔥 历史更新</h2>
-                    <div class="section-title-small">📋 主要功能</div>
-                    <div class="update-grid">
-                        <div class="update-item">难度选择（困难/地狱/深渊）</div>
-                        <div class="update-item">音乐试听模式（00-199）</div>
-                        <div class="update-item">过人单选系统</div>
-                        <div class="update-item">查看敌方人员</div>
-                        <div class="update-item">红黄牌系统</div>
-                        <div class="update-item">射门射偏系统</div>
-                        <div class="update-item">传球手球犯规</div>
-                        <div class="update-item">解围乌龙球</div>
-                        <div class="update-item">传球出界系统</div>
-                        <div class="update-item">上下半场换边</div>
-                        <div class="update-item">国家队全员明星</div>
-                        <div class="update-item">攻防显示系统</div>
-                    </div>
-
-                    <div class="section-title-small">🎨 游戏调整</div>
-                    <div class="update-grid">
-                        <div class="update-item">关卡音乐调整</div>
-                        <div class="update-item">头像颜色修复</div>
-                        <div class="update-item">等级限制 32 级</div>
-                        <div class="update-item">关卡对调</div>
-                        <div class="update-item">难度逐渐提升</div>
-                        <div class="update-item">半场 45 分钟</div>
-                        <div class="update-item">硬直死机修复</div>
-                        <div class="update-item">若林使用调整</div>
-                        <div class="update-item">罚下开球修复</div>
-                        <div class="update-item">AI 传球优化</div>
-                        <div class="update-item">角球系统修复</div>
-                        <div class="update-item">画面速度优化</div>
-                    </div>
-                </div>
-            </div>
         </div>
 
         <div class="footer">
@@ -420,6 +489,29 @@
             if (bgElement) {
                 bgElement.style.backgroundImage = 'url("' + selectedImage + '")';
                 console.log('背景图片已加载：' + selectedImage);
+            }
+        })();
+
+        // 音乐自动播放（需要用户交互）
+        (function() {
+            const bgMusic = document.getElementById('bgMusic');
+            if (bgMusic) {
+                // 尝试自动播放
+                bgMusic.play().catch(function(error) {
+                    console.log('自动播放被阻止，等待用户点击：' + error);
+                });
+
+                // 用户点击页面任意位置后开始播放
+                document.addEventListener('click', function() {
+                    bgMusic.play();
+                    bgMusic.volume = 0.5;
+                }, { once: true });
+
+                // 鼠标悬停也可以触发
+                document.addEventListener('mouseover', function() {
+                    bgMusic.play();
+                    bgMusic.volume = 0.5;
+                }, { once: true });
             }
         })();
     </script>
