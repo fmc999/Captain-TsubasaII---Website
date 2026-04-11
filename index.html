@@ -17,7 +17,8 @@
             min-height: 100vh;
             color: #fff;
             position: relative;
-            overflow: hidden;
+            overflow-x: hidden;
+            overflow-y: auto;
         }
 
         .bg-layer {
@@ -46,11 +47,15 @@
 
         .main-container {
             display: grid;
-            grid-template-rows: auto auto 1fr auto;
+            grid-template-rows: auto auto auto auto;
             gap: 8px;
-            height: 100vh;
             padding: 10px;
-            overflow-y: auto;
+        }
+        
+        @media (max-width: 768px) {
+            .main-container {
+                height: auto;
+            }
         }
 
         .header {
@@ -152,6 +157,12 @@
             gap: 8px;
             overflow-y: auto;
             padding-right: 4px;
+        }
+        
+        @media (max-width: 768px) {
+            .left-panel, .right-panel {
+                overflow-y: visible;
+            }
         }
 
         .section {
@@ -292,7 +303,106 @@
             }
             
             .title {
-                font-size: 1.4em;
+                font-size: 1.3em;
+            }
+            
+            .subtitle {
+                font-size: 0.85em;
+            }
+            
+            .version-badge {
+                font-size: 0.85em;
+                padding: 4px 10px;
+            }
+            
+            .author {
+                font-size: 1em;
+            }
+            
+            .language-selector {
+                top: 5px;
+                right: 5px;
+            }
+            
+            .language-selector select {
+                padding: 4px 8px;
+                font-size: 0.85em;
+            }
+            
+            .main-container {
+                padding: 6px;
+                gap: 6px;
+            }
+            
+            .header {
+                padding: 10px 15px;
+            }
+            
+            .section h2 {
+                font-size: 1em;
+            }
+            
+            .feature-grid {
+                grid-template-columns: 1fr;
+                gap: 8px;
+            }
+            
+            .feature-card {
+                padding: 10px;
+            }
+            
+            .feature-icon {
+                font-size: 1.5em;
+            }
+            
+            .feature-name {
+                font-size: 0.9em;
+            }
+            
+            .feature-text {
+                font-size: 0.75em;
+            }
+            
+            #updateLogContent {
+                max-height: none !important;
+                overflow-y: visible !important;
+                font-size: 0.7em;
+            }
+            
+            .footer {
+                font-size: 0.7em;
+                padding: 6px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .key-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 4px;
+            }
+            
+            .key-box {
+                padding: 6px 2px;
+            }
+            
+            .key-label {
+                font-size: 0.7em;
+            }
+            
+            .key-code {
+                font-size: 0.95em;
+            }
+            
+            .title {
+                font-size: 1.15em;
+            }
+            
+            .subtitle {
+                font-size: 0.8em;
+            }
+            
+            .feature-grid {
+                grid-template-columns: 1fr;
             }
         }
 
