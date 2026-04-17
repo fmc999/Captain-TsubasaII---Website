@@ -403,6 +403,7 @@
             
             .feature-grid {
                 grid-template-columns: 1fr;
+                gap: 8px;
             }
         }
 
@@ -614,19 +615,26 @@
 
                 <div class="section">
                     <h2 data-i18n="gameVideo">📺 游戏视频 & 交流群</h2>
-                    <div class="feature-grid" style="grid-template-columns: repeat(2, 1fr);">
+                    <div class="feature-grid" style="grid-template-columns: repeat(3, 1fr);">
                         <a href="https://www.bilibili.com/video/BV1R2QMByEfM" target="_blank" style="text-decoration: none;">
-                            <div class="feature-card" style="background: rgba(255, 107, 107, 0.15); border-color: #ff6b6b; cursor: pointer; transition: all 0.3s; padding: 15px 8px;">
-                                <img src="bilibili.png" alt="Bilibili" style="width: 60px; height: 60px; margin-bottom: 8px; display: block; margin-left: auto; margin-right: auto;"/>
+                            <div class="feature-card" style="background: rgba(255, 107, 107, 0.15); border-color: #ff6b6b; cursor: pointer; transition: all 0.3s;">
+                                <img src="bilibili.png" alt="Bilibili" style="width: 60px; height: 60px; margin-bottom: 8px; display: block; margin-left: auto; margin-right: auto; object-fit: contain;"/>
                                 <div class="feature-name" data-i18n="bilibili" style="color: #ff6b6b; font-size: 0.95em; margin-bottom: 4px;">哔哩哔哩</div>
                                 <div class="feature-text" data-i18n="clickToWatch">点击查看游戏视频</div>
                             </div>
                         </a>
                         <a href="https://qm.qq.com/q/2y75TfM7eU" target="_blank" style="text-decoration: none;">
-                            <div class="feature-card" style="background: rgba(25, 100, 200, 0.15); border-color: #5a9aff; cursor: pointer; transition: all 0.3s; padding: 15px 8px;">
-                                <img src="qq.png" alt="QQ Group" style="width: 60px; height: 60px; margin-bottom: 8px; display: block; margin-left: auto; margin-right: auto;"/>
+                            <div class="feature-card" style="background: rgba(25, 100, 200, 0.15); border-color: #5a9aff; cursor: pointer; transition: all 0.3s;">
+                                <img src="qq.png" alt="QQ Group" style="width: 60px; height: 60px; margin-bottom: 8px; display: block; margin-left: auto; margin-right: auto; object-fit: contain;"/>
                                 <div class="feature-name" data-i18n="qqGroup" style="color: #5a9aff; font-size: 0.95em; margin-bottom: 4px;">QQ 交流群</div>
                                 <div class="feature-text" data-i18n="joinQQGroup">点击加入交流群</div>
+                            </div>
+                        </a>
+                        <a href="https://pd.qq.com/s/fo0lezw6g" target="_blank" style="text-decoration: none;">
+                            <div class="feature-card" style="background: rgba(25, 160, 120, 0.15); border-color: #5aaa8a; cursor: pointer; transition: all 0.3s;">
+                                <img src="xiazai.png" alt="Download" style="width: 60px; height: 60px; margin-bottom: 8px; display: block; margin-left: auto; margin-right: auto; object-fit: contain;"/>
+                                <div class="feature-name" data-i18n="download" style="color: #5aaa8a; font-size: 0.95em; margin-bottom: 4px;">下载</div>
+                                <div class="feature-text" data-i18n="clickToDownload">点击下载游戏</div>
                             </div>
                         </a>
                     </div>
@@ -670,7 +678,9 @@
                 bilibili: "哔哩哔哩",
                 clickToWatch: "点击查看游戏视频",
                 qqGroup: "QQ 交流群",
-                joinQQGroup: "点击加入交流群"
+                joinQQGroup: "点击加入交流群",
+                download: "下载",
+                clickToDownload: "点击下载游戏"
             },
             en: {
                 title: "⚽ Captain Tsubasa 2 - Who Will Win PC Ver. ⚽",
@@ -701,6 +711,8 @@
                 clickToWatch: "Click to watch game video",
                 qqGroup: "QQ Group",
                 joinQQGroup: "Click to join QQ group",
+                download: "Download",
+                clickToDownload: "Click to download game",
                 updateLogContent: `<p style="margin-bottom: 10px;"><strong style="color: #ff6b6b;">Disclaimer:</strong><br>Please credit the original author and source. Respect others and respect yourself. This version is purely for personal interest and hobby. Copyright belongs to the original manufacturer. To respect the original author, commercial use of this version and the materials and fonts used is prohibited. Violators assume all responsibility.</p>
                 
                 <p style="margin-bottom: 10px; border-top: 1px solid #ffd700; padding-top: 10px;"><strong style="color: #ffd700;">Captain Tsubasa Ⅱ - Who Will Win PC Remastered Version (Author: Taotao)</strong><br>
@@ -836,6 +848,8 @@
                 clickToWatch: "クリックして動画視聴",
                 qqGroup: "QQ コミュニティ",
                 joinQQGroup: "クリックしてコミュニティに参加",
+                download: "ダウンロード",
+                clickToDownload: "クリックしてゲームをダウンロード",
                 updateLogContent: `<p style="margin-bottom: 10px;"><strong style="color: #ff6b6b;">免責事項:</strong><br>原作者と出典を明記してください。他人を尊重することは自分自身を尊重することでもあります。このバージョンは個人の趣味と愛好のためのもので、著作権は元のメーカーに帰属します。原作者を尊重するため、このバージョンおよび使用されている素材やフォントの商用利用を禁止します。違反者は自己責任を負います。</p>
                 
                 <p style="margin-bottom: 10px; border-top: 1px solid #ffd700; padding-top: 10px;"><strong style="color: #ffd700;">キャプテン翼Ⅱ-誰与争鋒 PC リマスター版（作者：タオタオ）</strong><br>
@@ -971,6 +985,8 @@
                 clickToWatch: "انقر لمشاهدة فيديو اللعبة",
                 qqGroup: "مجموعة QQ",
                 joinQQGroup: "انقر للانضمام إلى مجموعة QQ",
+                download: "تحميل",
+                clickToDownload: "انقر لتحميل اللعبة",
                 updateLogContent: `<p style="margin-bottom: 10px;"><strong style="color: #ff6b6b;">إخلاء مسؤولية:</strong><br>يرجى ذكر المؤلف الأصلي والمصدر. احترام الآخرين هو احترام لنفسك. هذا الإصدار هو للهواية الشخصية فقط. حقوق النشر تعود للشركة المصنعة الأصلية. لاحترام المؤلف الأصلي، ممنوع الاستخدام التجاري لهذا الإصدار والمواد والخطوط المستخدمة. المخالفون يتحملون المسؤولية الكاملة.</p>
                 
                 <p style="margin-bottom: 10px; border-top: 1px solid #ffd700; padding-top: 10px;"><strong style="color: #ffd700;">كابتن تسوباسا Ⅱ - من سيتفوق النسخة.pc المعدلة (المؤلف: تاوتاو)</strong><br>
@@ -1106,6 +1122,8 @@
                 clickToWatch: "Oyun videosunu izlemek için tıklayın",
                 qqGroup: "QQ Grubu",
                 joinQQGroup: "QQ grubuna katılmak için tıklayın",
+                download: "İndir",
+                clickToDownload: "Oyunu indirmek için tıklayın",
                 updateLogContent: `<p style="margin-bottom: 10px;"><strong style="color: #ff6b6b;">Sorumluluk Reddi:</strong><br>Lütfen orijinal yazarı ve kaynağı belirtin. Başkalarına saygı duymak kendinize saygı duymaktır. Bu sürüm tamamen kişisel ilgi ve hobi içindir. Telif hakkı orijinal üreticiye aittir. Orijinal yazarına saygı göstermek için, bu sürümün ve kullanılan materyallerin ve yazı tiplerinin ticari kullanımı yasaktır. İhlal edenler tüm sorumluluğu üstlenir.</p>
                 
                 <p style="margin-bottom: 10px; border-top: 1px solid #ffd700; padding-top: 10px;"><strong style="color: #ffd700;">Kaptan Tsubasa Ⅱ - Kim Kazanacak PC Remastered Sürümü (Yazar: Taotao)</strong><br>
