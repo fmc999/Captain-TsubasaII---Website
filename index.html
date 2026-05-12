@@ -511,7 +511,7 @@
     </style>
 </head>
 <body>
-    <audio id="bgMusic" src="a1.MP3" autoplay loop></audio>
+    <audio id="bgMusic" autoplay loop></audio>
     <div class="bg-layer" id="bgImage"></div>
 
     <div class="ambient-bg">
@@ -998,16 +998,18 @@
         })();
 
         (function() {
+            const audioFiles = ['a1.MP3', 'a2.mp3', 'a3.mp3', 'a4.mp3', 'a5.mp3', 'a6.mp3'];
+            const randomIndex = Math.floor(Math.random() * audioFiles.length);
             const bgMusic = document.getElementById('bgMusic');
             if (bgMusic) {
+                bgMusic.src = audioFiles[randomIndex];
+                bgMusic.volume = 0.5;
                 bgMusic.play().catch(function() {});
                 document.addEventListener('click', function() {
                     bgMusic.play();
-                    bgMusic.volume = 0.5;
                 }, { once: true });
                 document.addEventListener('mouseover', function() {
                     bgMusic.play();
-                    bgMusic.volume = 0.5;
                 }, { once: true });
             }
         })();
